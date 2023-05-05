@@ -6,7 +6,7 @@ canvas.height = 576
 
 c.fillRect(0, 0, canvas.width, canvas.height)
 
-const gravity = 0.7
+const gravity = 1.0
 
 const background = new Sprite({
   position: {
@@ -15,7 +15,6 @@ const background = new Sprite({
   },
   imageSrc: './img/background.png'
 })
-
 
 const shop = new Sprite({
   position: {
@@ -30,7 +29,7 @@ const shop = new Sprite({
 const player = new Fighter({
   position: {
     x: 100,
-    y: 0
+    y: 576
   },
   velocity: {
     x: 0,
@@ -90,7 +89,7 @@ const player = new Fighter({
 const enemy = new Fighter({
   position: {
     x: 800,
-    y: 100
+    y: 576
   },
   velocity: {
     x: 0,
@@ -143,7 +142,7 @@ const enemy = new Fighter({
       x: -170,
       y: 50
     },
-    width: 170,
+    width: 160,
     height: 50
   }
 })
@@ -227,7 +226,7 @@ function animate() {
       rectangle2: enemy
     }) &&
     player.isAttacking &&
-    player.framesCurrent === 4
+    player.framesCurrent === 2
   ) {
     enemy.takeHit()
     player.isAttacking = false
@@ -318,7 +317,6 @@ window.addEventListener('keydown', (event) => {
         break
       case 'ArrowDown':
         enemy.attack()
-
         break
     }
   }

@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="red-container">
+    <div class="smaller-red-container">
+      
+      <!-- player health -->
+      <div class="player-health-main">
+        <div class="player-health-block"></div>
+        <div id="playerHealth"></div>
+      </div>
+
+      <!-- timer -->
+      <div id="timer">10</div>
+
+      <!-- enemy health -->
+      <div class="enemy-health-main">
+        <div class="enemy-health-block"></div>
+        <div id="enemyHealth"></div>
+      </div>
+      <div></div>
+    </div>
+    <div
+      id="displayText">Tie</div>
+    <canvas></canvas>
+    <div class="begin-block">
+      <button id="beginButton">Begin</button>
+    </div>
+    <div id="tutorial">
+      <img src="./img/howToPlay.png" alt="" />
+      <button id="startButton">Start</button>
+    </div>
+  </div>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+    integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="js/utils.js"></script>
+  <script src="js/classes.js"></script>
+  <script src="index.js"></script>
+</body>
